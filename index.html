@@ -2,43 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main>
+    <h1 class="uppercase title">Spli</br>tter</h1>
+    <form action="">
+      <div class="values">
+        <div class="section first-section">
+          <label for="bill">Bill</label>
+          <input type="text" id="bill" placeholder="0">
+        </div>
+        <div class="section second-section">
+          <label for="select-tip-custom">Select Tip %</label>
+          <div class="second-section-grid">
+            <input type="button" value="5%" id="select-tip-5">
+            <input type="button" value="10%" id="select-tip-10">
+            <input type="button" value="15%" id="select-tip-15">
+            <input type="button" value="25%" id="select-tip-25">
+            <input type="button" value="50%" id="select-tip-50">
+            <input type="text" name="select-tip-custom" id="select-tip-custom" placeholder="Custom">
+          </div>
+        </div>
+        <div class="section third-section">
+          <label for="people-number">Number of People</label>
+          <input type="text" id="people-number" placeholder="0">
+        </div>
+      </div>
+      <div class="calc">
+        <div class="calc-result">
+          <div class="tip-amount">
+            <div class="description">
+              <h2>Tip Amount</h2>
+              <p>/ person</p>
+            </div>
+            <h3>$<span id="tip-amount-result">0.00</span></h3>
+          </div>
+          <div class="total">
+            <div class="description">
+              <h2>Total</h2>
+              <p>/ person</p>
+            </div>
+            <h3>$<span id="total-result">0.00</span></h3>
+          </div>
+        </div>
+        <button class="uppercase" type="submit">Reset</button>
+      </div>
+    </form>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,245 @@
+:root {
+  --clr-strong-cyan: hsl(172, 67%, 45%);
+  --clr-strong-light-cyan: hsl(177, 52%, 67%);
+  --clr-strong-light-red: hsl(358, 52%, 67%);
+  --clr-very-dark-cyan: hsl(183, 100%, 15%);
+  --clr-grayish-cyan: hsl(184, 14%, 56%);
+  --clr-dark-grayish-cyan: hsl(186, 14%, 43%);
+  --clr-white-grayish-cyan: hsl(189, 41%, 97%);
+  --clr-light-grayish-cyan: hsl(185, 41%, 84%);
+  --clr-white: hsl(0, 0%, 100%);
+  --fs-body: 1rem;
+  --fs-h1: 1.5rem;
+  --fs-h2: 1.3rem;
+  --fs-h3: 1.8rem;
+  --ff-primary: 'Space Mono', sans-serif;
+  --br-primary: 20px;
+  --br-secondary: 15px;
+  --br-tertiary: 5px;
+  --bs-primary: 0 30px 50px hsla(184, 14%, 56%, 0.2);
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 1rem;
+  font-weight: 700;
+  font-size: var(--fs-body);
+  font-family: var(--ff-primary);
+  background-color: var(--clr-light-grayish-cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--clr-dark-grayish-cyan);
+  min-height: 100vh;
+  text-align: center;
+}
+
+input {
+  font-family: var(--ff-primary);
+  width: 100%;
+  font-size: var(--fs-h1);
+  border-radius: var(--br-tertiary);
+  border: none;
+  padding: 0.3rem 1rem;
+}
+
+#bill {
+  background-image: url("images/icon-dollar.svg");
+  background-position: center left 1rem;
+  background-repeat: no-repeat;
+}
+
+#people-number {
+  background-image: url("images/icon-person.svg");
+  background-position: center left 1rem;
+  background-repeat: no-repeat;
+}
+
+input[type="text"] {
+  background-color: var(--clr-white-grayish-cyan);
+  border: none;
+  width: 100%;
+  text-align: right;
+  color: var(--clr-very-dark-cyan);
+  font-weight: 700;
+}
+
+input.valid {
+  outline: 3px solid var(--clr-strong-cyan)
+}
+
+input.error {
+  outline: 3px solid var(--clr-strong-light-red)
+}
+
+input[type="text"]::placeholder {
+  font-weight: 700;
+  color: var(--clr-dark-grayish-cyan);
+}
+
+input[type="button"] {
+  font-weight: 700;
+  background-color: var(--clr-very-dark-cyan);
+  color: var(--clr-white);
+  cursor: pointer;
+  transition: 0.5s background-color ease;
+}
+
+input[type="button"]:hover, button:hover {
+  background-color: var(--clr-strong-light-cyan);
+  color: var(--clr-very-dark-cyan);
+}
+
+input.selected {
+  background-color: var(--clr-strong-cyan);
+  color: var(--clr-very-dark-cyan);
+}
+
+button {
+  font-weight: 700;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-h2);
+  width: 100%;
+  background-color: var(--clr-strong-cyan);
+  color: var(--clr-very-dark-cyan);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--br-tertiary);
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: 0.5s background-color ease;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+main {
+  width: 375px;
+}
+
+.title {
+  letter-spacing: 0.5em;
+  margin-bottom: 2em;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+form {
+  padding: 2rem;
+  background-color: var(--clr-white);
+  border-radius: var(--br-primary);
+  box-shadow: var(--bs-primary);
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.8em;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.second-section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 15px 15px;
+  grid-template-areas:
+    "select-tip-5 select-tip-10"
+    "select-tip-15 select-tip-25"
+    "select-tip-50 select-tip-custom";
+}
+
+.calc {
+  text-align: left;
+  background-color: var(--clr-very-dark-cyan);
+  border-radius: var(--br-secondary);
+  padding: 1.5rem;
+}
+
+.calc h3 {
+  color: var(--clr-strong-cyan);
+  font-size: var(--fs-h3);
+}
+
+.tip-amount, .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tip-amount {
+  margin-bottom: 2em;
+}
+
+.tip-amount h2, .total h2 {
+  font-size: var(--fs-body);
+  color: var(--clr-white);
+}
+
+@media screen and (min-width: 900px) {
+  .title {
+    margin-bottom: 3em;
+  }
+
+  :root {
+    --fs-h3: 2.8rem;
+  }
+
+  main {
+    width: 920px;
+    margin-top: -5rem;
+  }
+
+  form {
+    display: flex;
+    height: 480px;
+  }
+
+  form > * {
+    width: 50%;
+  }
+
+  .values {
+    padding: 1rem;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .calc {
+    padding: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .section {
+    margin-bottom: 0;
+  }
+
+  .calc-result {
+  }
+
+  .second-section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px 15px;
+    grid-template-areas:
+      "select-tip-5 select-tip-10"
+      "select-tip-15 select-tip-25"
+      "select-tip-50 select-tip-custom";
+  }
+}
