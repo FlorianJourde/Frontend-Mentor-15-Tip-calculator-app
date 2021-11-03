@@ -17,7 +17,7 @@ bill.addEventListener('keyup', updateBill);
 peopleNumber.addEventListener('keyup', updatePeople);
 
 selectTipCustom.addEventListener('keyup', function () {
-  if (Number.isInteger(parseFloat(this.value)) && parseFloat(this.value) !== 0) {
+  // if (Number.isInteger(parseFloat(this.value))) {
     tips.forEach(function(tip) {
       tip.classList.remove('selected');
     });
@@ -31,10 +31,10 @@ selectTipCustom.addEventListener('keyup', function () {
       tipAmountResult.textContent = (tippedValue - billValue).toFixed(2);
       totalResult.textContent = (tippedValue).toFixed(2);
     }
-  } else {
-    selectTipCustom.classList.remove('valid');
-    selectTipCustom.classList.add('error');
-  }
+  // } else {
+  //   selectTipCustom.classList.remove('valid');
+    // selectTipCustom.classList.add('error');
+  // }
 });
 
 for (let i = 0; i < tips.length; i++) {

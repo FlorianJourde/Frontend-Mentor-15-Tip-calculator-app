@@ -224,9 +224,6 @@ label {
     margin-bottom: 0;
   }
 
-  .calc-result {
-  }
-
   .second-section-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
