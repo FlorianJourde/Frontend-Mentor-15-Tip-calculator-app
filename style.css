@@ -188,17 +188,12 @@ label {
 }
 
 @media screen and (min-width: 900px) {
-  .title {
-    margin-bottom: 3em;
-  }
-
   :root {
     --fs-h3: 2.8rem;
   }
 
   main {
     width: 920px;
-    margin-top: -5rem;
   }
 
   form {
